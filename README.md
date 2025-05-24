@@ -8,7 +8,7 @@ A web-based implementation of the classic **Simon Game** — a memory-based colo
 
 ## 📸 Preview
 
-![Simon Game Gif](ScreenR.gif)  
+![Simon Game Gif](ScreenR.gif) 
 
 ## 🧠 How to Play
 
