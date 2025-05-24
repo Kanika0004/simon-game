@@ -74,4 +74,45 @@ function startOver(){
     started=false;
 }
 
+const fsBtn = document.getElementById("fullscreen-btn");
 
+fsBtn.addEventListener("click", function () {
+  const el = document.documentElement;
+
+  if (!document.fullscreenElement &&
+      !document.webkitFullscreenElement &&
+      !document.mozFullScreenElement &&
+      !document.msFullscreenElement) {
+
+    const rfs =
+      el.requestFullscreen ||
+      el.webkitRequestFullscreen ||
+      el.mozRequestFullScreen ||
+      el.msRequestFullscreen;
+
+    rfs && rfs.call(el);
+  } else {
+    const efs =
+      document.exitFullscreen ||
+      document.webkitExitFullscreen ||
+      document.mozCancelFullScreen ||
+      document.msExitFullscreen;
+
+    efs && efs.call(document);
+  }
+});
+
+document.addEventListener("fullscreenchange", updateFullscreenButton);
+document.addEventListener("webkitfullscreenchange", updateFullscreenButton);
+document.addEventListener("mozfullscreenchange", updateFullscreenButton);
+document.addEventListener("MSFullscreenChange", updateFullscreenButton);
+
+function updateFullscreenButton() {
+  const isFullscreen =
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement;
+
+  fsBtn.textContent = isFullscreen ? "Exit Screen" : "Fullscreen";
+}
