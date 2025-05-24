@@ -6,9 +6,15 @@ body{
   text-align: center;
 }
 
-/* html, body {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Force fullscreen height */
+  width: 100vw;
   overflow: hidden;
-} */
+}
+
+
 
 #fullscreen-btn {
   position: fixed;
@@ -17,18 +23,16 @@ body{
   z-index: 10000;
   padding: 8px 12px;
   font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.636);
-  color: white;
-  border: none;
+  background-color: rgba(0, 0, 0, 0.401);
+  color: rgb(255, 255, 255);
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   font-family: 'Press Start 2P', monospace;
   font-size: 10px;
 }
 
 #fullscreen-btn:hover {
-  background-color: rgba(255, 254, 254, 0.612);
+  background-color: rgba(255, 254, 254, 0.514);
 }
 
 
@@ -55,9 +59,10 @@ body{
   border-radius: 20%;
 }
 
-.game-over {
+.game-over { 
   box-shadow: inset 0 0 0 1000px rgba(221, 93, 93, 0.392);
 }
+
 
 .red {
   background-color: red;
