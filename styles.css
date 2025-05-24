@@ -6,9 +6,31 @@ body{
   text-align: center;
 }
 
-html, body {
+/* html, body {
   overflow: hidden;
+} */
+
+#fullscreen-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10000;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.636);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
 }
+
+#fullscreen-btn:hover {
+  background-color: rgba(255, 254, 254, 0.612);
+}
+
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
